@@ -11,17 +11,16 @@
 .Header .lower-line {
     background-color: white;
     height: 65px;
-    border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 25em;
-    padding-right: 25em;
+    padding-left: 15em;
+    padding-right: 15em;
 
 }
 
 .Header .phone-btn {
-    background-color: var(--light-purple);
+    background-color: var(--dark-purple);
     border: none;
     display: flex;
     flex-direction: row-reverse;

@@ -1,6 +1,6 @@
 import "./Header.css";
 import phoneIcon from "../../../images/phone-icon.svg"
-import temporaryLogo from "../../../images/logo.jpg"
+import temporaryLogo from "../../../images/logo-yomi.jpg"
 export function Header(): JSX.Element {
     return (
         <div className="Header">
