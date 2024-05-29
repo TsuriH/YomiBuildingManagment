@@ -17,7 +17,7 @@ export function Hero(): JSX.Element {
                 <div className="description">
                     <p className="first-sen">הבחירה המקצועית שלך לשירותי ניהול ואחזקה</p>
                     <h2>ניהול ואחזקת מבנים בסטנדרט שלא הכרתם!</h2>
-                    <p className="third-sen">חברת YUMI מתמחה בניהול ותחזוקה של בנייני דירות מסוגים שונים. היא מעניקה שירות מקצועי ומהיר, הכולל טיפול כולל בצרכי הדיירים. הצטרפו לקהילה הגדלה של לקוחות מרוצים וחוו את ההבדל המשמעותי כבר כיום!</p>
+                    <p className="third-sen">חברת <span>YUMI</span> מתמחה בניהול ותחזוקה של בנייני דירות מסוגים שונים. היא מעניקה שירות מקצועי ומהיר, הכולל טיפול כולל בצרכי הדיירים. הצטרפו לקהילה הגדלה של לקוחות מרוצים וחוו את ההבדל המשמעותי כבר היום!</p>
 
                     <div className="three-points">
                         <div className="first-point point">
@@ -43,8 +43,8 @@ export function Hero(): JSX.Element {
 
             </div>
 
-            <div className="hero-wave">
-                <img src={heroWave} alt="" className="heroWave"/>
+            <div className="wave-container">
+                <img src={heroWave} alt="" className="hero-wave"/>
                 <div className="rectangle-wave"></div>
             </div>
         </div >
