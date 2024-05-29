@@ -1,0 +1,74 @@
+.Hero {
+    height: 100%;
+    background-image: url("../../../images/interior-space-office-building-scaled.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: -1;
+}
+
+.Hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.Hero .content {
+    display: flex;
+    border: 15px solid red;
+    padding-left:15em ;
+    padding-right:15em ;
+}
+
+.Hero .image-hero-container {
+    width: 100%;
+    height: 900px;
+    z-index: 2;
+}
+
+.Hero .image-hero-container img{
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+}
+
+.Hero .description {
+    z-index: 2;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Hero .description h2 {
+    font-size: 64px;
+    color: var(--dark-purple);
+    font-family: "Encode Sans Condensed";
+    font-weight: 900;
+
+}
+
+.Hero .three-points {
+    display: flex;
+}
+
+.Hero .point {
+    display: flex;
+}
+
+.Hero .v-mark {
+    width: 10px;
+    height: auto;
+}
+
+
+
+

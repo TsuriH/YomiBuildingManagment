@@ -1,0 +1,67 @@
+.Header {
+    height: 100%;
+
+}
+
+.Header .upper-line {
+    background: var(--light-purple);
+    height: 35px;
+}
+
+.Header .lower-line {
+    background-color: white;
+    height: 65px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25em;
+    padding-right: 25em;
+
+}
+
+.Header .phone-btn {
+    background-color: var(--light-purple);
+    border: none;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2em 2em;
+    border-radius: 30px;
+}
+
+.Header .phone-icon-container {
+    height: 40px;
+    width: auto;
+}
+
+.Header .phone-icon-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.Header .phone-number {
+    color: white;
+    font-weight: bold;
+    font-family: "Arimo", sans-serif;
+    font-size: 1rem;
+}
+
+.Header .logo-container {
+    background-color: white;
+    width: 135px;
+    height: 150px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.Header .logo-container img {
+    width: 90%;
+    height: 90%;
+}
