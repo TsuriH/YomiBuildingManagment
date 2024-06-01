@@ -1,3 +1,148 @@
 .Footer {
-	
+    height: 100%;
+}
+
+.Footer .upper-square {
+    height: 80px;
+    background-color: var(--dark-purple);
+}
+
+.Footer .content {
+    background-image: url("../../../images//Building-in-the-city.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Footer .color-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.952);
+}
+
+.Footer .text-container {
+    position: absolute;
+    border: 1px solid;
+    border-radius: 45px;
+    height: 60%;
+    width: 80%;
+    direction: rtl;
+    margin-left: 200px;
+}
+
+.Footer .text-container .text {
+    width: 40%;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    line-height: 1.5em;
+}
+
+.Footer .small-line-deco {
+    width: 80px;
+    height: 5px;
+    background-color: var(--dark-purple);
+}
+
+.Footer .text-container .text h2 {
+    color: var(--dark-purple);
+    font-family: unset;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.Footer .text-container .text span {
+    font-weight: 900;
+}
+
+.Footer .contact {
+    position: relative;
+    background: white;
+    height: 80%;
+    width: 45%;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    padding: 2em;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+    margin-left: 200px;
+}
+
+.Footer .content form {
+    height: 50%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1em;
+
+}
+
+.Footer .content form .send-btn {
+    grid-row: 1/-1;
+    background-color: var(--dark-purple);
+    color: white;
+    font-family: unset;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+}
+
+.Footer .message {
+    grid-column: 4/2;
+
+}
+
+.Footer input {
+    padding-right: 1em;
+}
+
+.Footer textarea,
+.Footer input {
+    padding: 1em;
+    width: 100%;
+
+}
+
+.Footer .message input {
+    display: flex;
+}
+
+.Footer .contact form label {
+    direction: rtl;
+    display: flex;
+}
+
+.Footer .contact h2 {
+    font-size: 3em;
+}
+
+.Footer .contact p {
+    font-size: 1.2em;
+}
+
+.Footer .social-container {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em
+}
+
+
+.Footer .social-container>* {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
 }
