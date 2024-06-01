@@ -16,6 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+
 }
 
 .Footer .color-overlay {
@@ -123,6 +125,14 @@
     display: flex;
 }
 
+.Footer input::placeholder,
+.Footer .message textarea::placeholder {
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
 .Footer .contact h2 {
     font-size: 3em;
 }
@@ -132,11 +142,12 @@
 }
 
 .Footer .social-container {
-    font-size: 1.5em;
+    font-size: 1.3em;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 1em
+    
 }
 
 
@@ -145,4 +156,42 @@
     gap: 1em;
     align-items: center;
 
+}
+
+@media (max-width: 900px) {
+
+    .Footer .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        margin: 1em;
+        height: 1500px;
+        background-size: contain;
+
+    }
+
+    .Footer .text-container {
+        position: static;
+        z-index: 2;
+        margin: 0px;
+    }
+
+    .Footer .contact {
+        margin: 0px;
+        width: 90%;
+
+    }
+
+    .Footer .text-container .text {
+        width: 100%;
+
+    }
+
+    .Footer .content form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
 }
