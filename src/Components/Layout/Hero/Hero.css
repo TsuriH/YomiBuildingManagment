@@ -1,21 +1,22 @@
 .Hero {
     height: 100%;
+   
 }
 
 .Hero .hero-content {
     display: flex;
     justify-content: center;
-    gap:em;
-    padding-left: 15em;
-    padding-right: 15em;
-    height: 100vh;
+    gap: 1em;
+    padding-left: 12em;
+    padding-right: 12em;
+    height: calc(100vh - 140px);
     background-image: url("../../../images/interior-space-office-building-scaled.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 2;
-
+    /* border: 10px solid; */
 }
 
 .Hero .v-mark {
@@ -37,7 +38,7 @@
 }
 
 .Hero .hero-image {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 150px);
     width: auto;
     display: flex;
     align-items: flex-end;
@@ -47,11 +48,13 @@
 
 .Hero .hero-image img {
     height: auto;
-    width: 100%;
+    width: 110%;
+    transform: rotate(358deg);
+
 }
 
 .Hero .hero-copy {
-    /* border: 4px solid purple; */
+    padding-top: 10em;
     direction: rtl;
     display: flex;
     flex-direction: column;
@@ -62,8 +65,8 @@
 }
 
 .Hero .hero-copy .third-sen {
-    max-width: 600px;
-    font-size: 1.1em
+    max-width: 550px;
+    font-size: 1.2em
 }
 
 .Hero .ask-for-details-btn {
@@ -81,7 +84,7 @@
 }
 
 .Hero .first-sen {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-family: unset;
 }
 
@@ -95,6 +98,7 @@
 
 .Hero .third-sen span {
     font-weight: 800;
+
 }
 
 .Hero .three-points {
@@ -111,19 +115,45 @@
 
 .Hero .hero-lower-wave {
     position: absolute;
-    bottom: 0px;
+    bottom: 40px;
     right: 0px;
-    width: 200%;
-    height: 20%;
+    width: 100%;
+    height: 200px;
     z-index: 3;
-    display: block;
 }
 
-.Hero .hero-lower-blue-square {
-    position: absolute;
+.Hero .rectangle-wave {
+    background: var(--dark-purple);
+    display: flex;    
+    padding-left: 12em;
+    padding-right: 12em;
+}
+
+
+.Hero .services-icons {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     width: 100%;
-    height: 430px;
-    bottom: 0px;
-    right: 0px;
-    z-index: 5;
+    align-items: center;
+    place-items: center;
+}
+
+
+.Hero .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    width: 60px;
+    height: auto;
+    grid-row: 2/3;
+}
+
+
+.Hero .icon-container img {
+    width: 100%;
+    height: 100%;
+
 }

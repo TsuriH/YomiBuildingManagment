@@ -112,7 +112,6 @@ export function Hero(): JSX.Element {
 
             </div>
             <img src={heroWave} alt="" className="hero-lower-wave" />
-            <div className="hero-lower-blue-square"></div>
         </div >
     );
 } 
