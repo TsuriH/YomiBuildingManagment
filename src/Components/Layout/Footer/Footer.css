@@ -23,7 +23,7 @@
 .Footer .color-overlay {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 110%;
     background: rgba(255, 255, 255, 0.952);
 }
 
@@ -73,10 +73,11 @@
     flex-direction: column;
     border-radius: 35px;
     padding: 2em;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     gap: 1em;
     margin-left: 200px;
+
 }
 
 .Footer .content form {
@@ -130,7 +131,7 @@
     color: black;
     font-size: 1.2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+
 }
 
 .Footer .contact h2 {
@@ -147,7 +148,6 @@
     flex-direction: column;
     align-items: start;
     gap: 1em
-    
 }
 
 
@@ -165,33 +165,63 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 2em;
-        margin: 1em;
-        height: 1500px;
+        height: 1250px;
         background-size: contain;
-
     }
 
     .Footer .text-container {
         position: static;
         z-index: 2;
         margin: 0px;
+        height: auto;
+
+    }
+
+    .Footer .text-container .text h2 {
+        font-size: 1em;
+
     }
 
     .Footer .contact {
         margin: 0px;
         width: 90%;
+        height: auto;
+    }
 
+    .Footer .contact h2 {
+
+        font-size: 2em;
+    }
+
+    .Footer .contact p {
+
+        font-size: 1em;
     }
 
     .Footer .text-container .text {
         width: 100%;
+        padding: 2em;
 
     }
 
     .Footer .content form {
         display: flex;
         flex-direction: column;
-        margin-bottom: 2em;
+        justify-content: ;
+
     }
+
+    .Footer .upper-square {
+        height: 20px;
+        margin-top: -0.1em;
+    }
+
+    .Footer .content form {
+        height: 100%;
+        position: relative;
+
+    }
+
 }

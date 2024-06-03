@@ -16,13 +16,15 @@ import inventoryIcon from "../../../images/inventory-icon.svg"
 export function Hero(): JSX.Element {
     return (
         <div className="Hero">
-            <div className="content">
 
-                <div className="image-hero-container">
+            <div className="hero-content">
+
+                <div className="hero-image">
                     <img src={buildingHero} alt="" />
+                    <div className="overlay"></div>
                 </div>
 
-                <div className="description">
+                <div className="hero-copy">
                     <p className="first-sen">הבחירה המקצועית שלך לשירותי ניהול ואחזקה</p>
                     <h2>ניהול ואחזקת מבנים בסטנדרט שלא הכרתם!</h2>
                     <p className="third-sen">חברת <span>YUMI</span> מתמחה בניהול ותחזוקה של בנייני דירות מסוגים שונים. היא מעניקה שירות מקצועי ומהיר, הכולל טיפול כולל בצרכי הדיירים. הצטרפו לקהילה הגדלה של לקוחות מרוצים וחוו את ההבדל המשמעותי כבר היום!</p>
@@ -45,14 +47,14 @@ export function Hero(): JSX.Element {
                     </div>
                     <button className="ask-for-details-btn">
                         <p>בקשו עוד פרטים</p>
-                        <img src={leftChevron} alt="" />
+                        <img src={leftChevron} alt="" className="left-chevron" />
                     </button>
                 </div>
 
             </div>
 
             <div className="wave-container">
-                <img src={heroWave} alt="" className="hero-wave" />
+
                 <div className="rectangle-wave">
                     <div className="services-icons">
 
@@ -109,18 +111,8 @@ export function Hero(): JSX.Element {
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
+            <img src={heroWave} alt="" className="hero-lower-wave" />
+            <div className="hero-lower-blue-square"></div>
         </div >
     );
 } 

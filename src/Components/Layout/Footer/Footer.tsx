@@ -29,8 +29,8 @@ export function Footer(): JSX.Element {
                                 <p>0555555555</p>
                             </div>
                             <div className="email">
-                            <FontAwesomeIcon icon={faEnvelope} />
-                            <p>yomi@gmail.com</p>
+                                <FontAwesomeIcon icon={faEnvelope} />
+                                <p>yomi@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -39,8 +39,11 @@ export function Footer(): JSX.Element {
                 </div>
 
                 <div className="contact">
-                    <h2>יצירת קשר</h2>
-                    <p>מכאן מתחילים השאירו פרטים ונחזור בהקדם האפשרי</p>
+                    <div className="contact-headline">
+                        <h2>יצירת קשר</h2>
+                        <p>מכאן מתחילים השאירו פרטים ונחזור בהקדם האפשרי</p>
+
+                    </div>
                     <form action="">
                         <label htmlFor="">
 
