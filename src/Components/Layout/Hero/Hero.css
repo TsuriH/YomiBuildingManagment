@@ -5,15 +5,17 @@
 .Hero .hero-content {
     display: flex;
     justify-content: center;
-    height: calc(100vh - 100px);
-    /* height: 100vh; */
+    gap:em;
+    padding-left: 15em;
+    padding-right: 15em;
+    height: 100vh;
     background-image: url("../../../images/interior-space-office-building-scaled.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 2;
-    border: green 2px solid;
+
 }
 
 .Hero .v-mark {
@@ -35,11 +37,12 @@
 }
 
 .Hero .hero-image {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
     width: auto;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    /* border: 5px solid red; */
 }
 
 .Hero .hero-image img {
