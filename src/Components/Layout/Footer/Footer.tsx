@@ -9,7 +9,6 @@ export function Footer(): JSX.Element {
 
     return (
         <div className="Footer">
-            <div className="upper-square"></div>
             <div className="content">
 
                 <div className="color-overlay"></div>

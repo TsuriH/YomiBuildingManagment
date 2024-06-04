@@ -1,7 +1,4 @@
-.Hero {
-    height: 100%;
-
-}
+.Hero {}
 
 .Hero .hero-content {
     display: flex;
@@ -124,7 +121,7 @@
     display: flex;
     padding-left: 12em;
     padding-right: 12em;
-    z-index: 3;
+    z-index: 2;
     position: relative;
 }
 
@@ -157,6 +154,79 @@
 .Hero .icon-container img {
     width: 100%;
     height: 100%;
+
+}
+
+/* responsive */
+/* mobile */
+@media (max-width: 576px) {
+
+    .Hero .hero-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        justify-content: start;
+        background-image: none;
+    }
+
+    .Hero .hero-image {
+        position: absolute;
+        bottom: 0px;
+        width: 70%;
+        height: auto;
+        z-index: -2;
+    }
+
+    .Hero .hero-copy {
+        margin-bottom: 0px;
+        padding-top: 6em;
+    }
+
+    .Hero .hero-copy .first-sen {
+        font-size: 1.3em;
+    }
+
+    .Hero .hero-copy .third-sen {
+        font-size: 1em;
+    }
+
+    .Hero .three-points {
+        flex-wrap: wrap;
+        gap: 0em;
+        justify-content: center;
+        column-gap: 0.6em;
+        font-size: 1.2em;
+
+    }
+
+    .Hero .ask-for-details-btn {
+        align-self: center;
+    }
+
+    .Hero .hero-lower-wave {
+        position: absolute;
+        bottom: 40px;
+        right: 0px;
+        width: 100%;
+        height: 100px;
+        z-index: 10;
+    }
+
+    .Hero .services-icons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 40px;
+        gap: 2em;
+        padding-bottom: 40px;
+
+    }
+
+    .Hero .icon-container {
+        grid-row: auto;
+        width: 40px;
+
+    }
+
 
 }
 
@@ -194,57 +264,5 @@
         padding-left: 3em;
         padding-right: 3em;
     }
-
-}
-
-@media (max-width:400px) {
-
-    .Hero .hero-content {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-        justify-content: start;
-        background-image: none;
-    }
-
-    .Hero .hero-image {
-        position: absolute;
-        bottom: 0px;
-        width: 70%;
-        height: auto;
-        z-index: -2;
-    }
-
-    .Hero .hero-copy {
-        margin-bottom: 0px;
-        padding-top: 6em;
-    }
-
-    .Hero .hero-copy .third-sen {
-        font-size: 1.1em;
-    }
-
-    .Hero .three-points {
-        flex-wrap: wrap;
-        gap: 0em;
-        justify-content: center;
-        column-gap: 0.6em;
-    }
-
-    .Hero .services-icons {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        padding-top: 40px;
-        gap:2em;
-        padding-bottom: 40px;
-
-    }
-
-    .Hero .icon-container {
-        grid-row: auto;
-        width: 40px;
-
-    }
-
 
 }
