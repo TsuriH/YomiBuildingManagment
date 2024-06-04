@@ -65,12 +65,38 @@
     height: 90%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
 
     .Header .lower-line {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 5.5em;
+        padding-right: 5.5em;
+    }
+
+    .Header .phone-number {
+        display: none;
+    }
+
+    .Header .phone-btn {
+        padding: 0.2em 0.2em;
+    }
+
+    .Header .logo-container {
+        width: 132px;
+
+    }
+
+    
+
+
+}
+
+@media (max-width: 400px) {
+
+
+    .Header .lower-line {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
     }
 
     .Header .phone-number {

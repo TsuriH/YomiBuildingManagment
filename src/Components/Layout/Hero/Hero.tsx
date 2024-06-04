@@ -18,10 +18,10 @@ export function Hero(): JSX.Element {
         <div className="Hero">
 
             <div className="hero-content">
+                    <div className="overlay"></div>
 
                 <div className="hero-image">
                     <img src={buildingHero} alt="" />
-                    <div className="overlay"></div>
                 </div>
 
                 <div className="hero-copy">
