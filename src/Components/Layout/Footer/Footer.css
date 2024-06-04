@@ -2,53 +2,24 @@
     overflow: hidden;
 }
 
-.Footer .upper-square {
-    height: 80px;
-    background-color: var(--dark-purple);
-
-}
-
-.Footer .content {
-    background-image: url("../../../images//Building-in-the-city.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 700px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-
-
-}
-
-.Footer .color-overlay {
-    position: absolute;
-    height: 100%;
-    width: 110%;
-    background: rgba(255, 255, 255, 0.952);
-}
-
 .Footer .text-container {
-    position: absolute;
+    padding: 1em;
     border: 1px solid;
     border-radius: 45px;
-    height: 60%;
-    width: 80%;
     direction: rtl;
-    margin-left: 200px;
 
 }
 
 .Footer .text-container .text {
-    width: 40%;
-    padding: 3em;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    line-height: 1.5em;
-
 }
+
+.Footer .description {
+    line-height: 1.5em;
+}
+
 
 .Footer .small-line-deco {
     width: 80px;
@@ -70,8 +41,6 @@
 .Footer .contact {
     position: relative;
     background: white;
-    height: 80%;
-    width: 45%;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 15px 10px;
     display: flex;
     flex-direction: column;
@@ -80,22 +49,20 @@
     justify-content: space-evenly;
     text-align: center;
     gap: 1em;
-    margin-left: 200px;
+    direction: rtl;
 
 }
 
 .Footer .content form {
-    height: 50%;
-    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 1em;
 
 }
+ 
 
 .Footer .content form .send-btn {
-    grid-row: 1/-1;
     background-color: var(--dark-purple);
     color: white;
     font-family: unset;
@@ -125,15 +92,12 @@
     display: flex;
 }
 
-.Footer .contact form label {
-    direction: rtl;
-    display: flex;
-}
+
 
 .Footer input::placeholder,
 .Footer .message textarea::placeholder {
     color: black;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -161,90 +125,6 @@
     align-items: center;
 
 }
+ 
 
 
-
-
-@media (max-width: 576px) {
-
-    .Footer .content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2em;
-        height: 1250px;
-        background-size: contain;
-
-    }
-
-    .Footer .text-container {
-        position: static;
-        z-index: 2;
-        margin: 0px;
-        height: auto;
-    }
-
-    .Footer .text-container .text h2 {
-        font-size: 1em;
-    }
-
-    .Footer .contact {
-        margin: 0px;
-        width: 90%;
-        height: auto;
-    }
-
-    .Footer .contact h2 {
-
-        font-size: 2em;
-    }
-
-    .Footer .contact p {
-
-        font-size: 1em;
-    }
-
-    .Footer .text-container .text {
-        width: 100%;
-        padding: 2em;
-
-    }
-
-    .Footer .content form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .Footer .upper-square {
-        height: 20px;
-        margin-top: -0.1em;
-    }
-
-    .Footer .content form {
-        height: 100%;
-        position: relative;
-
-    }
-
-}
-
-@media (max-width: 1100px) {
-
-
-    .Footer .contact {
-        margin-left: 1em;
-    }
-
-    .Footer .content .text {
-        width: 70%;
-        padding: 2em;
-    }
-
-    .Footer .content {
-        margin-right: 1em;
-
-    }
-
-}
