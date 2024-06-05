@@ -13,6 +13,8 @@ export function Layout(): JSX.Element {
             <main>
                 <Hero />
                 <Footer />
+ 
+
             </main>
         </div>
     );

@@ -9,6 +9,7 @@ export function Footer(): JSX.Element {
 
     return (
         <div className="Footer">
+            <div className="white-bg-image-cover"></div>
             <div className="content">
                 <div className="text-container">
                     <div className="text">
@@ -35,47 +36,31 @@ export function Footer(): JSX.Element {
                 </div>
 
                 <div className="contact">
+
                     <div className="contact-headline">
                         <h2>יצירת קשר</h2>
                         <p>מכאן מתחילים השאירו פרטים ונחזור בהקדם האפשרי</p>
 
                     </div>
+
                     <form action="">
-                        <label htmlFor="">
 
-                            <input type="text" {...register("first")} placeholder="אימייל" />
-                        </label>
+                        <input type="text" {...register("first")} placeholder="אימייל" />
 
-                        <label htmlFor="">
+                        <input type="text" {...register("first")} placeholder="שם" className="name-input" />
 
-                            <input type="text" {...register("first")} placeholder="שם" className="name-input" />
-                        </label>
+                        <input type="text" {...register("first")} placeholder="עיר" />
 
-                        <label htmlFor="">
+                        <input type="text" {...register("first")} placeholder="טלפון" />
 
-                            <input type="text" {...register("first")} placeholder="עיר" />
-                        </label>
+                        <input type="text" {...register("first")} placeholder="מספר  קומות" />
 
-                        <label htmlFor="">
+                        <input{...register("first")} placeholder="מספר דירות בבניין" />
 
-                            <input type="text" {...register("first")} placeholder="טלפון" />
-                        </label>
-
-                        <label htmlFor="">
-
-                            <input type="text" {...register("first")} placeholder="מספר  קומות" />
-                        </label>
-
-                        <label htmlFor="">
-
-                            <input{...register("first")} placeholder="מספר דירות בבניין" />
-                        </label>
-
-                        <label htmlFor="" className="message" >
-                            <textarea  {...register("first")} placeholder="הודעה" ></textarea>
-                        </label>
+                        <textarea  {...register("first")} placeholder="הודעה" ></textarea>
 
                         <button className="send-btn">שליחה</button>
+                        
                     </form>
                 </div>
 
