@@ -199,7 +199,7 @@
 
 }
 
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
 
     .Footer {
         background-repeat: no-repeat;
@@ -223,4 +223,23 @@
     }
 
 
+ }
+
+ @media (min-width: 750px) and (max-width:1300px){
+    .Footer .content {
+        display: flex;
+        flex-direction: column;
+        /* border: 5px solid; */
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+
+    }
+
+    .Footer .text-container {
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 45px;
+        max-width: 90%;
+    }
  }
