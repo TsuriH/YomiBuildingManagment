@@ -47,11 +47,11 @@ export function Contact(): JSX.Element {
                         <div className="social-container">
                             <div className="phone">
                                 <FontAwesomeIcon icon={faPhone} />
-                                <p>0555555555</p>
+                                <p>0504445632</p>
                             </div>
                             <div className="email">
                                 <FontAwesomeIcon icon={faEnvelope} />
-                                <p>yomi@gmail.com</p>
+                                <p>yuminihul@gmail.com</p>
                             </div>
                         </div>
                     </div>

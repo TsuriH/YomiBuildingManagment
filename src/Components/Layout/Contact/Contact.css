@@ -117,8 +117,7 @@
 }
 
 .Contact textarea {
-    grid-column: -4/-2;
-
+    grid-column: -4/-2;  
 }
 
 .Contact .message input {
@@ -126,7 +125,7 @@
 }
 
 .Contact input::placeholder,
-.Contact .message textarea::placeholder {
+.Contact textarea::placeholder {
     color: black;
     font-size: 1em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
