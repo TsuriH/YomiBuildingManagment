@@ -1,14 +1,38 @@
-import { useForm } from "react-hook-form";
-import "./Footer.css";
+import "./Contact.css";
+
 import { faFacebook, faSquareWhatsapp, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-export function Footer(): JSX.Element {
-    const { register, handleSubmit } = useForm();
+import emailjs from "@emailjs/browser"
+import { useRef } from "react";
+import { useForm } from "react-hook-form";
+
+export function Contact(): JSX.Element {
+    const { handleSubmit } = useForm();
+    const form = useRef<HTMLFormElement | null>(null)
+
+    const sendEmail = (e: any) => {
+        if (form.current) {
+            emailjs
+                .sendForm('yumi2024', 'yumi_landing_page', form.current, {
+                    publicKey: 'hj5e7F6IY_Pgmt-AY',
+                })
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                        console.log("message sent")
+                        // e.target.reset()
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                    },
+                );
+        }
+    };
 
 
     return (
-        <div className="Footer">
+        <div className="Contact">
             <div className="white-bg-image-cover"></div>
             <div className="content">
                 <div className="text-container">
@@ -43,24 +67,24 @@ export function Footer(): JSX.Element {
 
                     </div>
 
-                    <form action="">
+                    <form ref={form} onSubmit={handleSubmit(sendEmail)}>
 
-                        <input type="text" {...register("first")} placeholder="אימייל" />
+                        <input type="email" placeholder="אימייל" name="email" />
 
-                        <input type="text" {...register("first")} placeholder="שם" className="name-input" />
+                        <input type="text" placeholder="שם" className="fist-input" name="name" />
 
-                        <input type="text" {...register("first")} placeholder="עיר" />
+                        <input type="text" placeholder="עיר" name="city" />
 
-                        <input type="text" {...register("first")} placeholder="טלפון" />
+                        <input type="number" placeholder="טלפון" name="phone" />
 
-                        <input type="text" {...register("first")} placeholder="מספר  קומות" />
+                        <input type="number" placeholder="מספר  קומות" name="number_floors" />
 
-                        <input{...register("first")} placeholder="מספר דירות בבניין" />
+                        <input placeholder="מספר דירות בבניין" name="condos_in_buildings" />
 
-                        <textarea  {...register("first")} placeholder="הודעה" ></textarea>
+                        <textarea placeholder="הודעה" name="message"></textarea>
 
                         <button className="send-btn">שליחה</button>
-                        
+
                     </form>
                 </div>
 
