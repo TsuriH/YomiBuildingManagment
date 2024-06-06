@@ -9,7 +9,7 @@ export function Header(): JSX.Element {
             <div className="lower-line">
 
                 <button className="phone-btn">
-                    <p className="phone-number">055-5555555</p>
+                    <p className="phone-number">0504445632</p>
                     <div className="phone-icon-container">
                         <img src={phoneIcon} className="phone-icon" alt="" />
                     </div>
