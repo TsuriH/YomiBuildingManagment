@@ -29,6 +29,13 @@
     border-radius: 30px;
 }
 
+.Header .phone-btn:hover {
+    cursor: pointer;
+    background-color: rgb(80, 18, 66);
+   
+}
+
+
 .Header .phone-icon-container {
     height: 40px;
     width: auto;

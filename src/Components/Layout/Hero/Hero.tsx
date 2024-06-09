@@ -82,7 +82,7 @@ export function Hero(): JSX.Element {
                     <button className="ask-for-details-btn" onClick={() => { toggleInstantForm() }}>
                         <p>בקשו עוד פרטים</p>
                         <img src={leftChevron} alt="" className="left-chevron" />
-                    </button>
+                    </button>      
                 </div>
 
             </div>
@@ -147,7 +147,8 @@ export function Hero(): JSX.Element {
             </div>
             <img src={heroWave} alt="" className="hero-lower-wave" />
 
-            <div className="form-overlay-dark" style={instantFormClosed ? { display: "none" } : { display: "flex" }} >
+
+            <div className="form-overlay-dark" style={instantFormClosed ? { opacity: 0 } : { opacity: 1, pointerEvents: "auto"}} >
 
                 <div className="instant-form" >
 
