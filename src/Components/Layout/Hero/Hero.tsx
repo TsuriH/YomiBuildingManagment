@@ -15,11 +15,13 @@ import emailjs from "@emailjs/browser"
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faX } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faX } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 
 
 export function Hero(): JSX.Element {
+
     const { handleSubmit } = useForm();
     const form = useRef<HTMLFormElement | null>(null)
     const [instantFormClosed, setInstantFormClosed] = useState(true)
@@ -41,6 +43,18 @@ export function Hero(): JSX.Element {
                     },
                 );
         }
+    }
+
+
+    const handlePhoneClick = () => {
+        window.location.href = "tel:0504445632"; 
+    };
+
+
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "9720504445632"; 
+        const message = "שלום חברת yumi אני מתעניין בשירות שלכם "; 
+        window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     };
 
     const toggleInstantForm = () => {
@@ -82,7 +96,7 @@ export function Hero(): JSX.Element {
                     <button className="ask-for-details-btn" onClick={() => { toggleInstantForm() }}>
                         <p>בקשו עוד פרטים</p>
                         <img src={leftChevron} alt="" className="left-chevron" />
-                    </button>      
+                    </button>
                 </div>
 
             </div>
@@ -148,7 +162,7 @@ export function Hero(): JSX.Element {
             <img src={heroWave} alt="" className="hero-lower-wave" />
 
 
-            <div className="form-overlay-dark" style={instantFormClosed ? { opacity: 0 } : { opacity: 1, pointerEvents: "auto"}} >
+            <div className="form-overlay-dark" style={instantFormClosed ? { opacity: 0 } : { opacity: 1, pointerEvents: "auto" }} >
 
                 <div className="instant-form" >
 
@@ -172,6 +186,20 @@ export function Hero(): JSX.Element {
                 </div>
 
             </div>
+
+            <div className="fast-contact-btn">
+
+                <div className="phone-container" onClick={handlePhoneClick}>
+                    <FontAwesomeIcon icon={faPhone} className="phone-icon" />
+                </div>
+
+                <div className="whatsapp-container"  onClick={handleWhatsAppClick}>
+                    <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
+                </div>
+
+
+            </div>
+
 
         </div >
     );
