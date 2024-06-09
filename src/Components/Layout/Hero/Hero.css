@@ -291,9 +291,9 @@
 }
 
 .Hero .phone-container {
-    
+
     background-color: rgb(142, 135, 197);
-  display: none;
+    display: none;
 }
 
 .Hero .phone-icon {
@@ -406,11 +406,11 @@
     }
 
     .Hero .whatsapp-container,
-.Hero .phone-container {
-    width: 50px;
-    height: 50px;
+    .Hero .phone-container {
+        width: 50px;
+        height: 50px;
 
-}
+    }
 
 
     .Hero .phone-container {
@@ -428,7 +428,7 @@
         right: 10px;
         z-index: 200;
     }
-    
+
 
 }
 
@@ -501,6 +501,13 @@
         width: 40px;
 
     }
+
+    
+    .Hero .phone-container {
+        display: flex;
+
+    }
+
 
 
 }
