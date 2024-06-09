@@ -3,7 +3,6 @@ import vMark from "../../../images/vmark.svg"
 import buildingHero from "../../../images/buildinghero.png"
 import leftChevron from "../../../images/leftchevron.svg"
 import heroWave from "../../../images/herowave.svg"
-
 import binIcon from "../../../images/bin-icon.svg"
 import maintenancesIcon from "../../../images/maintenence-icon.svg"
 import washingIcon from "../../../images/washing-icon.svg"
@@ -12,13 +11,48 @@ import safetyIcon from "../../../images/safety-icon.svg"
 import polishIcon from "../../../images/polish-icon.svg"
 import paintingIcon from "../../../images/painting-icon.svg"
 import inventoryIcon from "../../../images/inventory-icon.svg"
+import emailjs from "@emailjs/browser"
+import { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+
+
 
 export function Hero(): JSX.Element {
+    const { handleSubmit } = useForm();
+    const form = useRef<HTMLFormElement | null>(null)
+    const [instantFormClosed, setInstantFormClosed] = useState(true)
+
+    const sendEmail = (e: any) => {
+        if (form.current) {
+            emailjs.sendForm('yumi2024', 'yumi_landing_page', form.current, {
+                publicKey: 'hj5e7F6IY_Pgmt-AY',
+            })
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                        console.log("message sent")
+                        form.current?.reset()
+                        setInstantFormClosed(!instantFormClosed)
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                    },
+                );
+        }
+    };
+
+    const toggleInstantForm = () => {
+        setInstantFormClosed(!instantFormClosed)
+    }
+
+
     return (
         <div className="Hero">
 
             <div className="hero-content">
-                    <div className="overlay"></div>
+                <div className="overlay"></div>
 
                 <div className="hero-image">
                     <img src={buildingHero} alt="" />
@@ -45,7 +79,7 @@ export function Hero(): JSX.Element {
                             <p>אחזקת מבנים</p>
                         </div>
                     </div>
-                    <button className="ask-for-details-btn">
+                    <button className="ask-for-details-btn" onClick={() => { toggleInstantForm() }}>
                         <p>בקשו עוד פרטים</p>
                         <img src={leftChevron} alt="" className="left-chevron" />
                     </button>
@@ -112,6 +146,34 @@ export function Hero(): JSX.Element {
 
             </div>
             <img src={heroWave} alt="" className="hero-lower-wave" />
+
+            <div className="form-overlay-dark" style={instantFormClosed ? { display: "none" } : { display: "flex" }} >
+
+                <div className="instant-form" >
+
+                    <FontAwesomeIcon icon={faX} className="close-btn" onClick={() => { toggleInstantForm() }} />
+                    <p className="sub-header">שלחו פניה ונחזור אליכם במהירות </p>
+
+                    <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+
+                        <input type="text" placeholder="שם" className="fist-input" name="name" />
+
+                        <input type="email" placeholder="אימייל" name="email" />
+
+                        <input type="number" placeholder="טלפון" name="phone" />
+
+                        <textarea placeholder="הודעה" name="message"></textarea>
+
+                        <button className="send-btn">שליחה</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
         </div >
     );
-} 
+}
+
+

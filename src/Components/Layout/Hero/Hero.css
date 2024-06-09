@@ -74,6 +74,11 @@
     display: flex;
     align-self: flex-start;
     align-items: center;
+    cursor: pointer;
+}
+
+.Hero .ask-for-details-btn:hover {
+    background-color: rgb(8, 8, 46);
 }
 
 .Hero .first-sen {
@@ -124,7 +129,7 @@
     padding-right: 12em;
     z-index: 2;
     position: relative;
-     
+
 }
 
 
@@ -159,15 +164,106 @@
 
 }
 
-/* responsive */
-/* /* MOBILE: 375px */ 
+.Hero .instant-form {
+    z-index: 11;
+    direction: rtl;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+    background-color: var(--dark-purple);
+    text-align: center;
+    color: white;
+    width: 50%;
+    height: 50%;
+    gap: 1em;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
 
-@media (max-width: 375px){
+.Hero .form-overlay-dark {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    z-index: 12;
+    position: fixed;
+
+
+}
+
+.Hero form {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 1em;
+    background-color: var(--light-purple);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+
+}
+
+.Hero textarea {
+    grid-column: 1/-1;
+    grid-row: 2/4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Hero .send-btn {
+    grid-row: 4/5;
+    grid-column: -4/-1;
+}
+
+.Hero .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+
+.Hero .close-btn:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    color: black;
+}
+
+.Hero form input {
+    width: 100%;
+}
+
+.Hero form input::placeholder,
+.Hero form textarea::placeholder {
+    padding-right: 0.5em;
+
+
+}
+
+.Hero .sub-header {
+    font-size: 2em;
+    font-weight: 700;
+    justify-self: start;
+    margin-bottom: 2em;
+    align-self: self-start;
+}
+
+/* responsive */
+/* /* MOBILE: 375px */
+
+@media (max-width: 375px) {
 
     .Hero .ask-for-details-btn {
         font-size: 0.8em;
     }
-    
+
     .Hero .three-points {
         display: flex;
         gap: 1em;
@@ -203,7 +299,7 @@
         font-size: 1em;
     }
 
- 
+
     .Hero .ask-for-details-btn {
         align-self: center;
     }
@@ -232,12 +328,36 @@
 
     }
 
-    
+    .Hero .instant-form {
+        width: 90%;
+        height: 60%;
+    }
+
+
+    .Hero form {
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+    }
+
+    .Hero form input,
+    .Hero form textarea,
+    .Hero form .send-btn {
+        flex: 1;
+    }
+
+    .Hero .sub-header {
+        font-size: 1em;
+        font-weight: 700;
+    }
+
+
+
 }
 
 
 /* MOBILE: 380PX - 576PX */
-@media  (min-width:380px) and (max-width: 576px) {
+@media (min-width:380px) and (max-width: 576px) {
 
     .Hero .hero-content {
         flex-direction: column-reverse;
@@ -336,5 +456,6 @@
         padding-right: 3em;
     }
 
-}
 
+
+}
