@@ -47,13 +47,13 @@ export function Hero(): JSX.Element {
 
 
     const handlePhoneClick = () => {
-        window.location.href = "tel:0504445632"; 
+        window.location.href = "tel:0504445632";
     };
 
 
     const handleWhatsAppClick = () => {
-        const phoneNumber = "9720504445632"; 
-        const message = "שלום חברת yumi אני מתעניין בשירות שלכם "; 
+        const phoneNumber = "9720504445632";
+        const message = "שלום חברת yumi אני מתעניין בשירות שלכם ";
         window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     };
 
@@ -193,7 +193,7 @@ export function Hero(): JSX.Element {
                     <FontAwesomeIcon icon={faPhone} className="phone-icon" />
                 </div>
 
-                <div className="whatsapp-container"  onClick={handleWhatsAppClick}>
+                <div className="whatsapp-container" onClick={handleWhatsAppClick}>
                     <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
                 </div>
 
