@@ -115,10 +115,6 @@
 
 }
 
-/*  start herrrreee!!!.Hero .wave-container {
-    border: 5px solid red;
-    margin-top: 220px;;
-} */
 
 .Hero .hero-lower-wave {
     position: absolute;
@@ -200,7 +196,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    transition: ;
+   
 }
 
 
