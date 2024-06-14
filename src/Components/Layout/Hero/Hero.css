@@ -73,7 +73,7 @@
     display: flex;
     align-self: flex-start;
     align-items: center;
-   
+
 
 }
 
@@ -115,6 +115,10 @@
 
 }
 
+/*  start herrrreee!!!.Hero .wave-container {
+    border: 5px solid red;
+    margin-top: 220px;;
+} */
 
 .Hero .hero-lower-wave {
     position: absolute;
@@ -264,7 +268,7 @@
 .Hero .fast-contact-btn {
     display: flex;
     justify-content: flex-end;
-    gap: 4em;
+    gap: 2em;
     position: fixed;
     bottom: 50px;
     right: 50px;
@@ -313,12 +317,15 @@
 
 /* responsive */
 
-@media (max-width: 1000px){
-    
-.Hero .hero-lower-wave {
-  
-    margin-bottom: -3.5em;
-}
+@media (max-width: 1000px) {
+
+    .Hero .hero-lower-wave {
+
+        margin-bottom: -3.5em;
+    }
+
+
+
 }
 
 
@@ -333,7 +340,8 @@
     .Hero .three-points {
         display: flex;
         gap: 1em;
-        font-size: 1em;
+        font-size: 0.9em;
+        justify-content: center;
     }
 
     .Hero .hero-content {
@@ -358,11 +366,11 @@
     }
 
     .Hero .hero-copy .first-sen {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .Hero .hero-copy .third-sen {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
 
@@ -470,11 +478,11 @@
     }
 
     .Hero .hero-copy .first-sen {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .Hero .hero-copy .third-sen {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     .Hero .three-points {
@@ -482,7 +490,8 @@
         gap: 0em;
         justify-content: center;
         column-gap: 0.6em;
-        font-size: 1.2em;
+        font-size: 0.9em;
+        justify-content: center;
 
     }
 
@@ -514,7 +523,7 @@
 
     }
 
-    
+
     .Hero .phone-container {
         display: flex;
 
