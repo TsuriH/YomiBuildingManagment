@@ -25,6 +25,7 @@ export function Hero(): JSX.Element {
     const { handleSubmit } = useForm();
     const form = useRef<HTMLFormElement | null>(null)
     const [instantFormClosed, setInstantFormClosed] = useState(true)
+    const [successMessage, setSuccessMessage] = useState(false);
 
     const sendEmail = (e: any) => {
         if (form.current) {
@@ -36,7 +37,12 @@ export function Hero(): JSX.Element {
                         console.log('SUCCESS!');
                         console.log("message sent")
                         form.current?.reset()
-                        setInstantFormClosed(!instantFormClosed)
+                        setSuccessMessage(true);
+                        setTimeout(() => {
+                            setInstantFormClosed(true)
+                            setSuccessMessage(false)
+                        }, 3000);
+                        // setInstantFormClosed(true);
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
@@ -49,6 +55,8 @@ export function Hero(): JSX.Element {
     const handlePhoneClick = () => {
         window.location.href = "tel:0504445632";
     };
+
+
 
 
     const handleWhatsAppClick = () => {
@@ -96,7 +104,7 @@ export function Hero(): JSX.Element {
                         <p>בקשו עוד פרטים</p>
                         <img src={leftChevron} alt="" className="left-chevron" />
                     </button>
-                    
+
                 </div>
 
             </div>
@@ -182,6 +190,7 @@ export function Hero(): JSX.Element {
                         <button className="send-btn">שליחה</button>
 
                     </form>
+                    {successMessage && <p className="success-message">ההודעה נשלחה בהצלחה!</p>}
 
                 </div>
 

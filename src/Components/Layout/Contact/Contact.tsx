@@ -4,12 +4,13 @@ import { faFacebook, faSquareWhatsapp, faWhatsapp } from "@fortawesome/free-bran
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser"
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 export function Contact(): JSX.Element {
     const { handleSubmit } = useForm();
     const form = useRef<HTMLFormElement | null>(null)
+    const [formStatus, setFormStatus] = useState<string | null>(null);
 
     const sendEmail = (e: any) => {
         if (form.current) {
@@ -21,7 +22,8 @@ export function Contact(): JSX.Element {
                     () => {
                         console.log('SUCCESS!');
                         console.log("message sent")
-                        // e.target.reset()
+                        setFormStatus('SUCCESS');
+                        form.current?.reset()
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
@@ -29,6 +31,7 @@ export function Contact(): JSX.Element {
                 );
         }
     };
+
 
 
     return (
@@ -86,6 +89,13 @@ export function Contact(): JSX.Element {
                         <button className="send-btn">שליחה</button>
 
                     </form>
+
+                    {formStatus && (
+                        <p style={{ fontSize: "2em", background: `var(--dark-purple)`, fontWeight: "bold" }} className={`form-status ${formStatus === 'SUCCESS' ? 'success' : 'error'}`}>
+                            {formStatus === 'SUCCESS' ? 'הודעה נשלחה בהצלחה!' : `שגיאה בשליחת הודעה: ${formStatus}`}
+                        </p>
+                    )}
+
                 </div>
 
             </div>

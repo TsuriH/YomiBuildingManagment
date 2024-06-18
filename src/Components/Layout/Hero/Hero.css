@@ -196,7 +196,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 
@@ -311,6 +311,26 @@
 
 }
 
+.Hero .send-btn:hover {
+    cursor: pointer;
+    background: var(--dark-purple);
+    color: white;
+}
+
+.Hero .success-message {
+    position: absolute;
+    right: 50%;
+    top:50%;
+    transform: translateX(50%) translateY(-50%);
+    font-size: 60px;
+    background-color: var(--light-purple);
+    color: var(--dark-purple);
+    font-weight: bold;
+
+}
+
+
+
 /* responsive */
 
 @media (max-width: 1000px) {
@@ -397,12 +417,6 @@
         width: 40px;
 
     }
-
-    .Hero .instant-form {
-        width: 90%;
-        height: 60%;
-    }
-
 
     .Hero form {
         display: flex;
