@@ -82,7 +82,6 @@ export function Hero(): JSX.Element {
                             <img src={vMark} alt="" className="v-mark" />
                             <p>ניהול בניינים</p>
                         </div>
-
                         <div className="second-point point">
                             <img src={vMark} alt="" className="v-mark" />
                             <p>ניהול ועד בית</p>
@@ -97,6 +96,7 @@ export function Hero(): JSX.Element {
                         <p>בקשו עוד פרטים</p>
                         <img src={leftChevron} alt="" className="left-chevron" />
                     </button>
+                    
                 </div>
 
             </div>
