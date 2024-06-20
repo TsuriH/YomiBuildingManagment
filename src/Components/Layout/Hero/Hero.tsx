@@ -108,6 +108,7 @@ export function Hero(): JSX.Element {
                 </div>
 
             </div>
+            <img src={heroWave} alt="" className="hero-lower-wave" />
 
             <div className="wave-container">
 
@@ -167,7 +168,6 @@ export function Hero(): JSX.Element {
                 </div>
 
             </div>
-            <img src={heroWave} alt="" className="hero-lower-wave" />
 
 
             <div className="form-overlay-dark" style={instantFormClosed ? { opacity: 0 } : { opacity: 1, pointerEvents: "auto" }} >
