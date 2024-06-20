@@ -1,3 +1,7 @@
+.Hero {
+    border: 5px solid red;
+}
+
 .Hero .hero-content {
     display: flex;
     justify-content: center;
@@ -341,7 +345,11 @@
         padding-right: 12em;
         z-index: 2;
         position: relative;
-        bottom: 113px
+        bottom: 0px
+    }
+
+    .Hero .hero-lower-wave {
+        bottom: 35px
     }
 
 
@@ -353,6 +361,25 @@
 /* /* MOBILE: 375px */
 
 @media (max-width: 375px) {
+
+
+
+    .Hero .rectangle-wave {
+        background: var(--dark-purple);
+        display: flex;
+        padding-left: 12em;
+        padding-right: 12em;
+        z-index: 2;
+        position: relative;
+        bottom: 40px
+    }
+
+    .Hero .hero-lower-wave {
+        bottom: 35px;
+        
+    }
+
+
 
     .Hero .ask-for-details-btn {
         font-size: 0.8em;
