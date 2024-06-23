@@ -358,6 +358,10 @@
 
 @media (max-width: 375px) {
 
+    .Hero .instant-form {
+        width: 90%;
+        height: 80%;  
+    }
 
 
     .Hero .rectangle-wave {
