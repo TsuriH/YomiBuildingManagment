@@ -13,7 +13,6 @@ export function Layout(): JSX.Element {
             <main>
                 <Hero />
                 <Contact />
- 
 
             </main>
         </div>
