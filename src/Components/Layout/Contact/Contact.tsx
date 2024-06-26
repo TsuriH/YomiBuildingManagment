@@ -59,12 +59,12 @@ export function Contact(): JSX.Element {
                         <p>
                             השאירו פרטים ונשמח לעזור לכם בניהול מלא כולל תחזוקה, הסירו דאגה מליבכם ותנו למקצוענים לטפל בכל!</p>
                         <div className="social-container">
-                            <div className="phone">
-                                <FontAwesomeIcon icon={faPhone} onClick={handlePhoneClick} />
+                            <div className="phone" onClick={handlePhoneClick}>
+                                <FontAwesomeIcon icon={faPhone}  />
                                 <p>0504445632</p>
                             </div>
-                            <div className="email">
-                                <FontAwesomeIcon icon={faEnvelope} onClick={handleEmailClick} />
+                            <div className="email" onClick={handleEmailClick} >
+                                <FontAwesomeIcon icon={faEnvelope} />
                                 <p>yuminihul@gmail.com</p>
                             </div>
                         </div>
