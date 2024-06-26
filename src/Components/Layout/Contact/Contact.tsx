@@ -12,6 +12,17 @@ export function Contact(): JSX.Element {
     const form = useRef<HTMLFormElement | null>(null)
     const [formStatus, setFormStatus] = useState<string | null>(null);
 
+    const handlePhoneClick = () => {
+        window.location.href = "tel:0504445632";
+    };
+
+    const handleEmailClick = () => {
+        window.location.href = "mailto:yuminihul@email.com?subject=מתעניין&body=שלום, אני מעוניין לקבל פרטים, חיזרו אליי בבקשה";
+
+    };
+
+
+
     const sendEmail = (e: any) => {
         if (form.current) {
             emailjs
@@ -49,11 +60,11 @@ export function Contact(): JSX.Element {
                             השאירו פרטים ונשמח לעזור לכם בניהול מלא כולל תחזוקה, הסירו דאגה מליבכם ותנו למקצוענים לטפל בכל!</p>
                         <div className="social-container">
                             <div className="phone">
-                                <FontAwesomeIcon icon={faPhone} />
+                                <FontAwesomeIcon icon={faPhone} onClick={handlePhoneClick} />
                                 <p>0504445632</p>
                             </div>
                             <div className="email">
-                                <FontAwesomeIcon icon={faEnvelope} />
+                                <FontAwesomeIcon icon={faEnvelope} onClick={handleEmailClick} />
                                 <p>yuminihul@gmail.com</p>
                             </div>
                         </div>

@@ -155,6 +155,12 @@
 
 }
 
+.Contact .social-container .phone:hover,.Contact .social-container .email:hover {
+    cursor: pointer;
+    background-color: var(--dark-purple);
+    color: white;
+}
+
 
 /* Responsive */
 
