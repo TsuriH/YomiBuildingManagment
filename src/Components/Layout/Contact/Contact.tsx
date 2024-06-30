@@ -1,11 +1,12 @@
 import "./Contact.css";
 
-import { faFacebook, faSquareWhatsapp, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser"
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+
+import { ReactTagManager } from 'react-gtm-ts';
 
 export function Contact(): JSX.Element {
     const { handleSubmit } = useForm();
@@ -25,16 +26,22 @@ export function Contact(): JSX.Element {
 
     const sendEmail = (e: any) => {
         if (form.current) {
-            emailjs
-                .sendForm('yumi2024', 'yumi_landing_page', form.current, {
-                    publicKey: 'hj5e7F6IY_Pgmt-AY',
-                })
+
+
+
+            emailjs.sendForm('yumi2024', 'yumi_landing_page', form.current, {
+                publicKey: 'hj5e7F6IY_Pgmt-AY',
+            })
                 .then(
                     () => {
                         console.log('SUCCESS!');
                         console.log("message sent")
                         setFormStatus('SUCCESS');
                         form.current?.reset()
+                        ReactTagManager.action({
+                            event: 'form_submission_success',
+                            formName: 'contact_form'
+                        });
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
@@ -60,7 +67,7 @@ export function Contact(): JSX.Element {
                             השאירו פרטים ונשמח לעזור לכם בניהול מלא כולל תחזוקה, הסירו דאגה מליבכם ותנו למקצוענים לטפל בכל!</p>
                         <div className="social-container">
                             <div className="phone" onClick={handlePhoneClick}>
-                                <FontAwesomeIcon icon={faPhone}  />
+                                <FontAwesomeIcon icon={faPhone} />
                                 <p>0504445632</p>
                             </div>
                             <div className="email" onClick={handleEmailClick} >
