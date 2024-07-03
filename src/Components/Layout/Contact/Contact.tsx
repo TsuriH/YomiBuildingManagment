@@ -76,7 +76,7 @@ export function Contact(): JSX.Element {
 
                     </div>
 
-                    <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+                    <form ref={form} onSubmit={handleSubmit(sendEmail)} className="my-form">
 
                         <input type="email" placeholder="אימייל" name="email" />
 

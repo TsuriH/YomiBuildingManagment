@@ -182,7 +182,7 @@ export function Hero(): JSX.Element {
                     <FontAwesomeIcon icon={faX} className="close-btn" onClick={() => { toggleInstantForm() }} />
                     <p className="sub-header">שלחו פניה ונחזור אליכם במהירות </p>
 
-                    <form ref={form} onSubmit={handleSubmit(sendEmail)} >
+                    <form ref={form} onSubmit={handleSubmit(sendEmail)} className="my-form" >
 
                         <input type="text" placeholder="שם" className="fist-input" name="name" />
 
