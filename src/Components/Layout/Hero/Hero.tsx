@@ -19,7 +19,7 @@ import { faPhone, faX } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { ReactTagManager } from "react-gtm-ts";
 
-
+import { ReactTagManager } from 'react-gtm-ts';
 
 export function Hero(): JSX.Element {
 
@@ -43,11 +43,20 @@ export function Hero(): JSX.Element {
                             setInstantFormClosed(true)
                             setSuccessMessage(false)
                         }, 3000);
+<<<<<<< HEAD
                         ReactTagManager.action({
                             event: 'forom_sumbmission_success',
                             formName: 'contact_form'
 
                         })
+=======
+
+                        ReactTagManager.action({
+                            event: 'form_submission_success',
+                            formName: 'hero_instant_form'
+                        });
+                        // setInstantFormClosed(true);
+>>>>>>> e93994c9cfba7b553c78919b5ef34df64b04f255
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
