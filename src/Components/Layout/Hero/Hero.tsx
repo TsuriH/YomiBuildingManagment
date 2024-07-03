@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faX } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { ReactTagManager } from "react-gtm-ts";
 
 
 
@@ -42,7 +43,11 @@ export function Hero(): JSX.Element {
                             setInstantFormClosed(true)
                             setSuccessMessage(false)
                         }, 3000);
-                        // setInstantFormClosed(true);
+                        ReactTagManager.action({
+                            event: 'forom_sumbmission_success',
+                            formName: 'contact_form'
+
+                        })
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
@@ -177,7 +182,7 @@ export function Hero(): JSX.Element {
                     <FontAwesomeIcon icon={faX} className="close-btn" onClick={() => { toggleInstantForm() }} />
                     <p className="sub-header">שלחו פניה ונחזור אליכם במהירות </p>
 
-                    <form ref={form} onSubmit={handleSubmit(sendEmail)}>
+                    <form ref={form} onSubmit={handleSubmit(sendEmail)} >
 
                         <input type="text" placeholder="שם" className="fist-input" name="name" />
 

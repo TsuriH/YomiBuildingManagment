@@ -6,6 +6,7 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import emailjs from "@emailjs/browser"
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import { ReactTagManager } from "react-gtm-ts";
 
 export function Contact(): JSX.Element {
     const { handleSubmit } = useForm();
@@ -24,6 +25,11 @@ export function Contact(): JSX.Element {
                         console.log("message sent")
                         setFormStatus('SUCCESS');
                         form.current?.reset()
+                        ReactTagManager.action({
+                            event: 'forom_sumbmission_success',
+                            formName: 'contact_form'
+
+                        })
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
